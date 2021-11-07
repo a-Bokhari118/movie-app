@@ -5,6 +5,7 @@ import {
   SearchIcon,
   StarIcon,
 } from '@heroicons/react/solid';
+import { signIn } from 'next-auth/client';
 
 const Header = () => {
   return (
@@ -42,7 +43,10 @@ const Header = () => {
           <span className="span">Series</span>
         </a>
       </div>
-      <button className="ml-auto uppercase border px-4 py-1.5 rounded font-medium tracking-wide hover:bg-white hover:text-gray-900 transition duration-500">
+      <button
+        className="ml-auto uppercase border px-4 py-1.5 rounded font-medium tracking-wide hover:bg-white hover:text-gray-900 transition duration-500"
+        onClick={signIn}
+      >
         Login
       </button>
     </div>
