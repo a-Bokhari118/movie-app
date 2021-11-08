@@ -5,7 +5,7 @@ import {
   SearchIcon,
   StarIcon,
 } from '@heroicons/react/solid';
-import { signIn, useSession } from 'next-auth/client';
+import { signIn, signOut, useSession } from 'next-auth/client';
 import { useRouter } from 'next/router';
 const Header = () => {
   const [session] = useSession();
@@ -17,6 +17,7 @@ const Header = () => {
         width={80}
         height={80}
         className="cursor-pointer"
+        onClick={() => router.push('/')}
       />
       {session && (
         <div className="ml-10 hidden md:flex items-center space-x-6">
@@ -57,6 +58,7 @@ const Header = () => {
         <img
           src={session?.user?.image}
           className="ml-auto h-12 w-12 rounded-full object-cover cursor-pointer"
+          onClick={signOut}
         />
       )}
     </div>
