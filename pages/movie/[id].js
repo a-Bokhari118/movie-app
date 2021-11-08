@@ -78,6 +78,10 @@ const SingleMovie = ({ result }) => {
             </p>
             <h4 className="text-sm md:text-lg max-w-4xl">{result.overview}</h4>
           </div>
+
+          {showPlayer && (
+            <div className="absolute inset-0 bg-black/50 h-full w-full z-50" />
+          )}
         </section>
       )}
     </div>
