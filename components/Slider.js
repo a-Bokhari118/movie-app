@@ -3,7 +3,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 const Slider = () => {
   return (
-    <section>
+    <section className="relative shadow-2xl  mx-auto">
       <Carousel
         autoPlay
         infiniteLoop
