@@ -1,14 +1,14 @@
 import Image from 'next/image';
 const Brands = () => {
   return (
-    <section className="flex flex-col md:flex-row justify-center items-center mt-10 gap-6 px-8 mx-auto ">
+    <section className="flex flex-col md:flex-row justify-center items-center mt-10 gap-6 px-8 mx-auto select-none">
       <div className="brand group">
         <Image src="/images/disnep.png" layout="fill" objectFit="cover" />
         <video
           autoPlay
           loop
           playsInline
-          className="hidden group-hover:inline rounded-lg object-cover w-full w-full"
+          className="hidden group-hover:inline rounded-lg object-cover w-full"
         >
           <source src="/videos/disney.mp4" type="video/mp4" />
         </video>
