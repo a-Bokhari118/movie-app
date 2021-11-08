@@ -1,5 +1,5 @@
-import { getFirestore } from '@firebase/firestore';
-import { initializeApp, getApp, getApps } from 'firebase/app';
+import firebase from 'firebase';
+
 const firebaseConfig = {
   apiKey: 'AIzaSyAB-JB5xgTcQNtHm1H_ckVvGenf_IM9wjg',
   authDomain: 'movie-app-17686.firebaseapp.com',
@@ -9,8 +9,10 @@ const firebaseConfig = {
   appId: '1:29176569496:web:f9fa6285ca853564d0baed',
 };
 
-const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+const app = !firebase.apps.length
+  ? firebase.initializeApp(firebaseConfig)
+  : firebase.app();
 
-const db = getFirestore();
+const db = app.firestore();
 
-export default db;
+export { db };
